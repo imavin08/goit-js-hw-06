@@ -17,7 +17,4 @@ function onFormSubmit(event) {
   }
   form.reset();
   console.log(info);
-
-  console.log(email);
-  console.log(password);
 }
