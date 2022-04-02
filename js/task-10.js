@@ -16,6 +16,7 @@ function createBoxes(amount) {
     box.style.backgroundColor = getRandomHexColor();
     boxesEl.append(box);
   }
+  inputEl.value = "";
 }
 
 function destroyBoxes() {
