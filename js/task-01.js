@@ -1,27 +1,20 @@
-// -1-
-const linksEl = document.querySelectorAll(".item");
-console.log(`Number of categories:${linksEl.length}`);
+const allItemEl = document.querySelectorAll("#categories");
 
-const titleEl = document.querySelectorAll("h2");
-console.log(`Category: ${titleEl[0].textContent}`);
+allItemEl.forEach((elem) => {
+  console.log(`Number of categories: ${elem.children.length}`);
 
-const firstItemEl = document.querySelector(".item");
-const firstItemLastChildEl = firstItemEl.lastElementChild;
-console.log(`Elements: ${firstItemLastChildEl.children.length}`);
+  // 1
+  const firstEl = elem.firstElementChild;
+  console.log(`Category: ${firstEl.firstElementChild.textContent}`);
+  console.log(`Elements: ${firstEl.lastElementChild.children.length}`);
 
-// -2-
+  // 2
+  const secondEl = firstEl.nextElementSibling;
+  console.log(`Category: ${secondEl.firstElementChild.textContent}`);
+  console.log(`Elements: ${secondEl.lastElementChild.children.length}`);
 
-console.log(`Category: ${titleEl[1].textContent}`);
-
-const allItemEl = document.querySelector("#categories");
-const secondItemEl = allItemEl.children[1];
-const secondItemLastShildEl = secondItemEl.lastElementChild;
-console.log(`Elements: ${secondItemLastShildEl.children.length}`);
-
-// -3-
-
-console.log(`Category: ${titleEl[2].textContent}`);
-
-const thirdItemEl = allItemEl.lastElementChild;
-const thirdItemLastShildEl = thirdItemEl.lastElementChild;
-console.log(`Elements: ${thirdItemLastShildEl.children.length}`);
+  // 3
+  const lastEl = elem.lastElementChild;
+  console.log(`Category: ${lastEl.firstElementChild.textContent}`);
+  console.log(`Elements: ${lastEl.lastElementChild.children.length}`);
+});

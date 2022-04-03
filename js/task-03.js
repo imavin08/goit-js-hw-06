@@ -18,7 +18,7 @@ const madeImage = (value) => {
   return value
     .map(
       ({ url, alt }) =>
-        `<li><img src = ${url} alt = ${alt} width = 300 height = 200></li>`
+        `<li class="gallery__item"><img src = ${url} alt = ${alt} width = 300 height = 200></li>`
     )
     .join("");
 };
