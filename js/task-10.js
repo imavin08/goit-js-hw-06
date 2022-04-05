@@ -8,9 +8,12 @@ const createBtnEl = document.querySelector("[data-create]");
 const destoyBtnEl = document.querySelector("[data-destroy]");
 
 let amount = 0;
+inputEl.addEventListener(
+  "input",
+  (event) => (amount = event.currentTarget.value)
+);
 
 function getAmount() {
-  amount = Number(inputEl.value);
   createBoxes(amount);
 }
 
